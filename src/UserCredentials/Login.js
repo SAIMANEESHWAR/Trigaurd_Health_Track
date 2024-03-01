@@ -32,7 +32,7 @@ export default function Login() {
             if(trueorfalse){
                 console.log('Log in successfully');
                 sessionStorage.setItem('verifieduseridsession', Id);  
-                sessionStorage.setItem('verifieduserpasswordsession',password);
+                // sessionStorage.setItem('verifieduserpasswordsession',password);
                  navigate("/Dashboard");
         
             }

@@ -12,7 +12,7 @@ export default function DashboardNavbar() {
                         {/* <button className="btn btn-white ms-2 me-2 mt-3" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
                     <i className="fa-solid fa-bars  h3  "></i></button> */}
-                        <h1 className="mt-2">VNR HACKTHON</h1>
+                        <h1 className="mt-2">Block Busters</h1>
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

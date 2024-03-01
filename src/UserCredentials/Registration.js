@@ -34,7 +34,7 @@ export default function Registration() {
                 console.log(tx);
                 console.log('Log in successfully');
                 sessionStorage.setItem('verifieduseridsession', Id);  
-                sessionStorage.setItem('verifieduserpasswordsession',password);
+                // sessionStorage.setItem('verifieduserpasswordsession',password);
                  navigate("/Dashboard");
                 console.log(" REQUEST SENT SUCCESSFULLY");
             }).catch(function (tx) {

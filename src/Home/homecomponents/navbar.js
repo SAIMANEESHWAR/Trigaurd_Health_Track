@@ -22,7 +22,7 @@ export default function Navbar() {
                     <div className="container-fluid" style={{ width: "100%" }}>
 
                         <div className='d-flex flex-row mb-1'>
-                            <h2 className="mt-3" >VNR HACKTHON</h2>
+                            <h2 className="mt-3" >Block Busters</h2>
                         </div>
 
                         <div className='d-flex flex-row justify-content-end'>
@@ -40,7 +40,9 @@ export default function Navbar() {
 
                                 <li className="nav-item">
                                     <form className="d-flex" role="search">
-                                        <h2 className='mt-2 me-3'><i class="fa-solid fa-bell fa-shake"></i></h2>
+                                        <h2 className='mt-2 me-3'>
+                                            {/* <i class="fa-solid fa-bell fa-shake"></i> */}
+                                            </h2>
 
                                         <button onClick={sendtopage} className="nav-link active" aria-current="page">
                                             <div className="profilenavbar">

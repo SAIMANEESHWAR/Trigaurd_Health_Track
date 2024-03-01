@@ -26,7 +26,17 @@ export const AppProvider = ({ children }) => {
                 },
                 {
                     "internalType": "string",
-                    "name": "dataItem",
+                    "name": "_hash",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_date",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_filename",
                     "type": "string"
                 }
             ],
@@ -76,9 +86,26 @@ export const AppProvider = ({ children }) => {
             "name": "getDataHash",
             "outputs": [
                 {
-                    "internalType": "string[]",
+                    "components": [
+                        {
+                            "internalType": "string",
+                            "name": "hash",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "date",
+                            "type": "string"
+                        },
+                        {
+                            "internalType": "string",
+                            "name": "filename",
+                            "type": "string"
+                        }
+                    ],
+                    "internalType": "struct UserManagement.Data[]",
                     "name": "",
-                    "type": "string[]"
+                    "type": "tuple[]"
                 }
             ],
             "stateMutability": "view",
@@ -129,7 +156,7 @@ export const AppProvider = ({ children }) => {
         }
     ]);
     
-	const [MyAddress, setMyAddress] = useState('0x71d205Ad97a62CCd447B8DBDb6F8e9EE6460F76d');
+	const [MyAddress, setMyAddress] = useState('0x66f3e5D0098238EfAEe76b66D9C87d7D8BC39C2c');
 	const [MyCurrAccount, setMyCurrAccount] = useState('');
 	useEffect(() => {
 		const onload23 = async () => {
