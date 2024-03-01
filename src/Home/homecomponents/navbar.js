@@ -22,7 +22,7 @@ export default function Navbar() {
                     <div className="container-fluid" style={{ width: "100%" }}>
 
                         <div className='d-flex flex-row mb-1'>
-                            <h2 className="mt-3" >Block Busters</h2>
+                            <h2 className="mt-3" >BlockBusters</h2>
                         </div>
 
                         <div className='d-flex flex-row justify-content-end'>

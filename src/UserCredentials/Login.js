@@ -33,7 +33,7 @@ export default function Login() {
                 console.log('Log in successfully');
                 sessionStorage.setItem('verifieduseridsession', Id);  
                 // sessionStorage.setItem('verifieduserpasswordsession',password);
-                 navigate("/Dashboard");
+                 navigate("/Dashboard/NestedUpload");
         
             }
             else{

@@ -35,7 +35,7 @@ export default function Registration() {
                 console.log('Log in successfully');
                 sessionStorage.setItem('verifieduseridsession', Id);  
                 // sessionStorage.setItem('verifieduserpasswordsession',password);
-                 navigate("/Dashboard");
+                 navigate("/Dashboard/NestedUpload");
                 console.log(" REQUEST SENT SUCCESSFULLY");
             }).catch(function (tx) {
 

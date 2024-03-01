@@ -185,7 +185,7 @@ function NestedUpload() {
 
   return (
     <div className="container-fluid mt-5">
-      <div className="row justify-content-center">
+      <div className="row mt-5 justify-content-center">
         <div className="col-md-6">
           <div className="upload-container p-4 m-4 mx-auto">
             <div {...getRootProps()} className="dropzone" style={{ backgroundColor: '#F5F5F5', border: '2px dashed #CCCCCC', borderRadius: '8px' }}>
