@@ -32,6 +32,7 @@ function NestedRetrieve() {
     const fetchData = async () => {
       var username = sessionStorage.getItem('verifieduseridsession');
       var doc = await MyFinalContract.methods.getDataHash(username).call();
+      console.log(doc)
       setDocumentt(doc);
     };
     fetchData();
