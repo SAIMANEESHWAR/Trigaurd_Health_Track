@@ -32,7 +32,7 @@ function NestedUpload() {
       reader.readAsBinaryString(file);
     });
 
-    // Encrypt the file content using AES encryption with a salt
+
     const encrypted = CryptoJS.AES.encrypt(fileContent, salt).toString();
 
     return encrypted;
