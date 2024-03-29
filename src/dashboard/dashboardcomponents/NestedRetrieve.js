@@ -18,6 +18,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useContext } from 'react';
+import CryptoJS from 'crypto-js';
 import { AppContext } from '../../connect_to_blockchain/passAbiAddress';
 
 function NestedRetrieve() {
@@ -37,13 +38,47 @@ function NestedRetrieve() {
     };
     fetchData();
   }, []);
+  // const yourEncryptionFunction = async (file, key, salt) => {
+  //   // Read the file content as a binary string
+  //   const reader = new FileReader();
+  //   const fileContent = await new Promise((resolve, reject) => {
+  //     reader.onload = () => resolve(reader.result);
+  //     reader.onerror = () => reject(reader.error);
+  //     reader.readAsBinaryString(file);
+  //   });
+  
+  //   // Encrypt the file content using AES encryption with the key and salt
+  //   const encrypted = CryptoJS.AES.encrypt(fileContent, key + salt).toString();
+  
+  //   return encrypted;
+  // };
   const openModal = async(hash) => {
     setLoading(true);
 
     try {
       // Your axios code to retrieve image
       const response = await axios.get(`https://ipfs.io/ipfs/${hash}`);
-      setImageUrl(`https://ipfs.io/ipfs/${hash}`);
+//setImageUrl(`https://ipfs.io/ipfs/${hash}`);
+var deg=`https://ipfs.io/ipfs/${hash}`
+console.log(deg);
+      /* */
+      
+        try {
+          // Decrypt the encrypted string using AES decryption with the key and salt
+          const decrypted = CryptoJS.AES.decrypt(deg, 'yourSaltValue').toString(CryptoJS.enc.Utf8);
+          console.log(decrypted);
+          // Convert the decrypted content back to a Blob
+          const decryptedBlob = new Blob([decrypted], { type: 'application/octet-stream' });
+          console.log(decryptedBlob);
+          setImageUrl(decryptedBlob);
+          
+        } catch (error) {
+          console.error('Error decrypting file:', error);
+          throw error;
+        }
+   
+      /* */
+      //
       setError(null);
     } catch (error) {
       setError('Error retrieving image.');

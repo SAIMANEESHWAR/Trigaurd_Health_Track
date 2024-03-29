@@ -4,12 +4,14 @@ import { AppContext } from '../../connect_to_blockchain/passAbiAddress';
 import { useDropzone } from 'react-dropzone';
 import { useContext } from 'react';
 import CryptoJS from 'crypto-js';
+
 function NestedUpload() {
   const { MyFinalweb3, MyFinalContract, MyCurrAccount } = useContext(AppContext);
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [uploadResult, setUploadResult] = useState(null);
   const [error, setError] = useState(null);
+  const [saltValue, setSaltValue] = useState('');
 
   const onDrop = async (acceptedFiles) => {
     const newFile = acceptedFiles[0];
@@ -21,23 +23,20 @@ function NestedUpload() {
     accept: 'image/*', 
   });
 
+  const yourEncryptionFunction = async (file, salt) => {
+    // Read the file content as a binary string
+    const reader = new FileReader();
+    const fileContent = await new Promise((resolve, reject) => {
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(reader.error);
+      reader.readAsBinaryString(file);
+    });
 
+    // Encrypt the file content using AES encryption with a salt
+    const encrypted = CryptoJS.AES.encrypt(fileContent, salt).toString();
 
-const yourEncryptionFunction = async (file, salt) => {
-  // Read the file content as a binary string
-  const reader = new FileReader();
-  const fileContent = await new Promise((resolve, reject) => {
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = () => reject(reader.error);
-    reader.readAsBinaryString(file);
-  });
-
-  // Encrypt the file content using AES encryption with a salt
-  const encrypted = CryptoJS.AES.encrypt(fileContent, salt).toString();
-
-  return encrypted;
-};
-
+    return encrypted;
+  };
 
   const handleUpload = async () => {
     if (!file) {
@@ -45,10 +44,15 @@ const yourEncryptionFunction = async (file, salt) => {
       return;
     }
 
+    if (!saltValue) {
+      setError('Please enter a salt value.');
+      return;
+    }
+
     setUploading(true);
 
     try {
-      const encryptedString = await yourEncryptionFunction(file, 'yourSaltValue');
+      const encryptedString = await yourEncryptionFunction(file, saltValue);
 
       const formData = new FormData();
       formData.append('file', new Blob([encryptedString], { type: 'text/plain' }));
@@ -111,6 +115,10 @@ const yourEncryptionFunction = async (file, salt) => {
                 </button>
               </div>
             </div>
+            {file && <div className="form-group mt-3">
+              <label htmlFor="saltValue">Enter Key:</label>
+              <input type="text" className="form-control" id="saltValue" value={saltValue} onChange={(e) => setSaltValue(e.target.value)} />
+            </div>}
             {file && (
               <div className=" text-center mt-3">
                 <h5>Selected Image:</h5>

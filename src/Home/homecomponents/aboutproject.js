@@ -34,7 +34,7 @@ export default function Aboutproject() {
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3"><Link class="text-body-secondary" to="https://www.linkedin.com/in/saimaneeshwar-siddapuram/"><i class="fa-brands fa-linkedin h2"></i></Link></li>
       <li class="ms-3"><Link class="text-body-secondary" to="https://www.instagram.com/"><i class="fa-brands fa-instagram h2"></i></Link></li>
-      <li class="ms-3"><Link class="text-body-secondary" to="https://github.com/SAIMANEESHWAR?tab=repositories"><i class="fa-brands fa-github h2"></i></Link></li>
+      <li class="ms-3"><Link class="text-body-secondary" to="https://github.com/Designathon2024/VNRD_CYS_05"><i class="fa-brands fa-github h2"></i></Link></li>
     </ul>
   </footer>
 </div>
