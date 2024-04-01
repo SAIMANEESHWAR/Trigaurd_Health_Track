@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 export default function Navbar() {
     const navigate = useNavigate();
     const sendtopage=()=>{
-        // console.log(sessionStorage.getItem('verifieduseridsession'))
-        // if(sessionStorage.getItem('verifieduseridsession')==null || sessionStorage.getItem('verifieduseridsession')==undefined ||sessionStorage.getItem('verifieduseridsession')==''){
-        //     navigate('/login2')
-        // }
-        // else{
-             navigate('/Register');
-        // }
+        
+        if(sessionStorage.getItem('verifieduseridsession')!=null && sessionStorage.getItem('verifieduseridsession')!=''){
+            navigate('/Dashboard/NestedUpload')
+        }
+        else{
+            navigate('/Login');
+        }
        }
     return (
         <div>

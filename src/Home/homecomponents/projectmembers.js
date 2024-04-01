@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import img from '../../photos/image_3.jpg'
 import mem1 from '../../photos/mem-1.jpg';
 import mem2 from '../../photos/mem-2.jpg';
-import me from '../../photos/myprofilepic.jpg';
+import me from '../../photos/me2.jpg';
+import lotusakshay from '../../photos/lotusakshay.jpg';
+import ananya from '../../photos/mem8.jpg'
 
 export default function projectmembers() {
-    const imgSources = [me, mem1, mem2];
-    const namesources = ["SaiManeeshwar", "Sravani", "Vinay"]
+    const imgSources = [me, mem1, mem2,ananya,lotusakshay];
+    const namesources = ["SaiManeeshwar", "Sravani", "Vinay","Ananya","Akshay"]
     return (
         <div>
             <div class="container mt-5">
