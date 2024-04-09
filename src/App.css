@@ -36,3 +36,171 @@
     transform: rotate(360deg);
   }
 }
+
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Chat container */
+  .chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Message containers */
+  .user-message-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .bot-message-container {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  /* User message */
+  .user-message {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  /* Bot message */
+  .bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  /* Typing container */
+  .typing-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Typing content */
+  .typing-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Typing textarea */
+  .typing-textarea {
+    flex: 1;
+  }
+  
+  /* Typing input */
+  #chat-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Send button */
+  #send-btn {
+    width: 100px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #send-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  /* Chat container */
+  .chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Message containers */
+  .user-message-container {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .bot-message-container {
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  /* User message */
+  .user-message {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  /* Bot message */
+  .bot-message {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  /* Typing container */
+  .typing-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Typing content */
+  .typing-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Typing textarea */
+  .typing-textarea {
+    flex: 1;
+  }
+  
+  /* Typing input */
+  #chat-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Send button */
+  #send-btn {
+    width: 100px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #send-btn:hover {
+    background-color: #0056b3;
+  }

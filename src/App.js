@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
+import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FileUpload from './fileUpload/FileUpload';
 import Home from './Home/Home';
@@ -8,6 +9,8 @@ import Login from './UserCredentials/Login';
 import Dashboard from './dashboard/dashboard';
 import NestedRetrieve from './dashboard/dashboardcomponents/NestedRetrieve';
 import NestedUpload from './dashboard/dashboardcomponents/NestedUpload';
+import Chatbot from './minichatgpt/chatbot';
+import ChatComponent from './minichatgpt/chatcomponent';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route path="NestedRetrieve" element={<NestedRetrieve />} />
             <Route path="NestedUpload" element={<NestedUpload />} />
         </Route>
+        <Route path='/Chatbot' element={<Chatbot />}></Route>
+        <Route path='/ChatComponent' element={<ChatComponent />}></Route>
+
       {/* <Route path='/* ' element={<Pagenotfound />}></Route> */}
     </Routes>
   </BrowserRouter>
